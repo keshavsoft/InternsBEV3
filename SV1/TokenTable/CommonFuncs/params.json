@@ -1,0 +1,1 @@
+{"TableName":"TokenTable","DataPath":"Data","Columns":["Secret"],"ColumnsWithSchema":[{"field":"Secret","title":"Secret","unique":true,"type":"text","isInput":true,"isAutoFocus":true}]}
