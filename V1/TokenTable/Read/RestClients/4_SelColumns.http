@@ -1,0 +1,4 @@
+POST http://localhost:9328/V1/TokenTable/Read/SelColumns
+Content-Type: application/json
+
+[ "exampleKey"]

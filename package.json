@@ -1,6 +1,6 @@
 {
-  "name": "OnlyBackEndNonSecured",
-  "version": "1.0.0",
+  "name": "InternsBEV3",
+  "version": "1.1.1",
   "description": "",
   "main": "app.js",
   "type": "module",

@@ -1,1 +1,1 @@
-GET http://localhost:3000/SV1/TokenTable/Read/SetSingleColumn/{Column name}
+GET http://localhost:9328/SV1/TokenTable/Read/SetSingleColumn/{Column name}

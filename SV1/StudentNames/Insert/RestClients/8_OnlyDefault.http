@@ -1,2 +1,2 @@
-POST http://localhost:3000/SV1/StudentNames/Insert/OnlyDefault
+POST http://localhost:9328/SV1/StudentNames/Insert/OnlyDefault
 Content-Type: application/json

@@ -1,4 +1,4 @@
-POST http://localhost:3000/SV1/StudentNames/Insert/SchemaColumnsOnly
+POST http://localhost:9328/SV1/StudentNames/Insert/SchemaColumnsOnly
 Content-Type: application/json
 
 {
