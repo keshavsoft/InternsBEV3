@@ -1,0 +1,1 @@
+{"TableName":"/SV2/TokenTable","showFooter":true,"toolbar":"#toolbar","searchable":true,"search":true,"columns":[{"field":"Secret","title":"Secret","unique":true,"type":"text","isInput":true,"isAutoFocus":true}],"Protected":{"RedirectUrl":"../Authentication/sign-in.html"},"DataTableOptions":{"Header":{"autoFocus":"title"}}}

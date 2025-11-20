@@ -1,0 +1,4 @@
+POST http://localhost:9328/SV2/TokenTable/Read/SelColsAsArray
+Content-Type: application/json
+
+[ "exampleKey"]

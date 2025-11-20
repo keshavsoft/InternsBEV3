@@ -54,3 +54,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.1.1
 
 - 3 Backups perfect
+
+### 1.2.1
+
+- V2 started

@@ -135,6 +135,8 @@
         "Delete",
         "Image",
         "Mail",
-        "InsertWithChecks"
+        "InsertWithChecks",
+        "Sort",
+        "GroupBy"
     ]
 }

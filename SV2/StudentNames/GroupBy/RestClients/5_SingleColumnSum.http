@@ -1,0 +1,6 @@
+POST http://localhost:9328/SV2/StudentNames/GroupBy/SingleColumnSum/{GroupByColumnName}
+Content-Type: application/json
+
+[
+	"SumColumnName"
+]
