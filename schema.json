@@ -1,7 +1,5 @@
 {
     "Tables": [
-        "StudentNames",
-        "TokenTable",
-        "UsersTable"
+        "StudentNames"
     ]
 }

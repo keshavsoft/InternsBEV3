@@ -58,3 +58,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.2.1
 
 - V2 started
+
+### 1.2.2
+
+- schema changed
