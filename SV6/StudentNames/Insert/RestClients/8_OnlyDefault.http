@@ -1,0 +1,2 @@
+POST http://localhost:9328/SV6/StudentNames/Insert/OnlyDefault
+Content-Type: application/json

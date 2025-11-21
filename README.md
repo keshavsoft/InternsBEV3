@@ -74,3 +74,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.5.1
 
 - delete from ui good
+
+### 1.6.1
+
+- image clipboard working
