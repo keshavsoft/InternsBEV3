@@ -26,6 +26,10 @@ import { router as routerFromSV6 } from "./SV6/routes.js";
 app.use(express.static('Public'));
 app.use(cookieParser());
 
+app.use("/AboutUs", (req, res) => {
+    res.send('Hello World!')
+});
+
 app.use("/Utility", routerFromUtility);
 app.use("/Secret", routerFromSecret);
 app.use("/Users", routerFromUsers);
