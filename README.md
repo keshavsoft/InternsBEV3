@@ -70,3 +70,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.4.1
 
 - timestamp inserted and shown
+
+### 1.5.1
+
+- delete from ui good

@@ -1,0 +1,1 @@
+DELETE http://localhost:9328/SV5/StudentNames/Delete/WithPk/{pk}
