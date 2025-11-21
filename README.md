@@ -62,3 +62,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.2.2
 
 - schema changed
+
+### 1.3.1
+
+- image and sort desc in ui
