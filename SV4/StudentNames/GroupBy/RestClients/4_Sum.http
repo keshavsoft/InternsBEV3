@@ -1,0 +1,19 @@
+POST http://localhost:9328/SV4/StudentNames/GroupBy/Sum
+Content-Type: application/json
+
+[
+	{
+  "StudentName": "",
+  "Mobile": "",
+  "Email": "",
+  "CollegeName": "",
+  "Country": "",
+  "EntranceRank": "",
+  "YearPassOut": "",
+  "Back_logs": "",
+  "RollNumber": "",
+  "file": "",
+  "GitLink": "",
+  "Intern2025": ""
+}
+]

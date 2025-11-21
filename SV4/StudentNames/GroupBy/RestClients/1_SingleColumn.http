@@ -1,0 +1,1 @@
+GET http://localhost:9328/SV4/StudentNames/GroupBy/SingleColumn/{GroupByColumnName}
