@@ -550,14 +550,6 @@
             };
 
             window.SendSms = (value, row, index) => {
-                console.log("value : ", value, row, index);
-                // return [
-                //     `<a href="#" class="link btn" title="image">`,
-                //     `<i class="bi bi-image text-success"></i>`,
-                //     `</a>`
-
-                // ].join('');
-
                 return `<a href="sms://${value}">SMS</a>`
             };
 

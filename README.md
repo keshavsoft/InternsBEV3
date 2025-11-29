@@ -82,3 +82,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.6.2
 
 - send sms started
+
+### 1.8.1
+
+- send sms perfect
