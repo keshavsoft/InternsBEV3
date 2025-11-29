@@ -78,3 +78,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.6.1
 
 - image clipboard working
+
+### 1.6.2
+
+- send sms started

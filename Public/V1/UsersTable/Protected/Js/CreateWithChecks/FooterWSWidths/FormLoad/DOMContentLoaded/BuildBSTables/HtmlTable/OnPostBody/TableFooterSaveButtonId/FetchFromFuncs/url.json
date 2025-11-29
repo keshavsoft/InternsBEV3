@@ -1,4 +1,0 @@
-{
-    "PostendPoint": "InsertWithChecks/ForUnique",
-    "PostendPoint_AsIs": "Insert/AsIs"
-}
