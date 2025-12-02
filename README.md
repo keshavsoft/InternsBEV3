@@ -90,3 +90,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.8.2
 
 - our works started
+
+### 1.8.3
+
+- VoiceToText started
