@@ -12,7 +12,7 @@
     <div class="app">
         <header class="app-header">
             <div class="title-block">
-                <h1>KeshavCare – V50</h1>
+                <h1>KeshavCare – V5</h1>
                 <p>Capture patient complaints as final notes while you consult.</p>
             </div>
             <div class="status-chip">
@@ -43,7 +43,7 @@
 
         <!-- Main toolbar -->
         <section class="toolbar">
-            <button id="k1" class="primary">
+            <button id="toggleRecordBtn" class="primary">
                 <span class="icon">🎙️</span>
                 <span id="toggleRecordLabel">Start Listening</span>
             </button>
@@ -95,7 +95,7 @@
             <span>Notes and audio remain even when you pause.</span>
         </footer>
     </div>
-
+    <!-- 
     <script>
         const liveTextEl = document.getElementById("liveText");
         const finalNotesListEl = document.getElementById("finalNotesList");
@@ -108,6 +108,7 @@
         recognition.lang = "en-US";
 
         const output = document.getElementById("liveText");
+        const statusText = document.getElementById("statusText");
 
         recognition.onresult = (event) => {
             let interimTranscript = "";
@@ -117,29 +118,36 @@
                 const result = event.results[i];
                 const transcript = result[0].transcript.trim();
                 console.log("aaaaaaaa : ", transcript);
-                // const firstKey = Object.keys(result)[0];
-                // addNote(JSON.stringify(result));
-                addNote(transcript);
-                // liveTextEl.textContent = firstKey;
-                // if (!transcript) continue;
+                if (!transcript) continue;
 
-                // if (result.isFinal) {
-                //     finalTranscript += transcript + " ";
-                // } else {
-                //     interimTranscript += transcript + " ";
-                // };
+                if (result.isFinal) {
+                    finalTranscript += transcript + " ";
+                } else {
+                    interimTranscript += transcript + " ";
+                };
+            }
+
+            if (interimTranscript) {
+                liveTextEl.textContent = interimTranscript;
+                liveTextEl.classList.remove("placeholder");
+            } else if (!finalTranscript && recognizing) {
+                liveTextEl.textContent = "Listening…";
+            }
+
+            if (finalTranscript) {
+                const sentences = splitIntoSentences(finalTranscript);
+                sentences.forEach((s) => addNote(s));
+                liveTextEl.textContent = "";
+                liveTextEl.classList.add("placeholder");
             };
+        };
 
-            // liveTextEl.textContent = finalTranscript + interimTranscript;
-            // liveTextEl.classList.remove("placeholder");
-
-
-            // if (finalTranscript) {
-            //     const sentences = splitIntoSentences(finalTranscript);
-            //     sentences.forEach((s) => addNote(s));
-            //     liveTextEl.textContent = "";
-            //     liveTextEl.classList.add("placeholder");
-            // };
+        recognition.onerror = (event) => {
+            console.error("Speech recognition error:", event.error);
+            statusText.textContent = "Error: " + event.error;
+            if (event.error === "not-allowed" || event.error === "service-not-allowed") {
+                alert("Mic permission blocked or speech service not allowed. Check site permissions.");
+            }
         };
 
         function splitIntoSentences(text) {
@@ -149,7 +157,7 @@
                 .filter((s) => s.length > 0);
         };
 
-        document.getElementById("k1").onclick = () => recognition.start();
+        document.getElementById("toggleRecordBtn").onclick = () => recognition.start();
         // document.getElementById("stop").onclick = () => recognition.stop();
 
         // ---- FINAL NOTES: ADD / EDIT / DELETE ----
@@ -200,7 +208,9 @@
             finalNotesListEl.appendChild(li);
         };
 
-    </script>
+    </script> -->
+
+    <script src="script5.js"></script>
 
 </body>
 
