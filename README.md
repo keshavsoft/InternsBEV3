@@ -102,3 +102,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.8.5
 
 -added doctors from chakri
+
+### 1.8.6
+
+-unwanted folders deleted
