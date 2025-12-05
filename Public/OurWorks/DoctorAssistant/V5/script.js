@@ -1,4 +1,3 @@
-const finalNotesListEl = document.getElementById("finalNotesList");
 
 const StartFunc = () => {
     const liveTextEl = document.getElementById("liveText");
@@ -18,7 +17,7 @@ const StartFunc = () => {
         for (let i = event.resultIndex; i < event.results.length; i++) {
             const result = event.results[i];
             const transcript = result[0].transcript.trim();
-            console.log("aaaaaaaa : ", transcript);
+            // console.log("aaaaaaaa : ", transcript);
             // addNote(transcript);
             if (!transcript) continue;
 
@@ -29,12 +28,15 @@ const StartFunc = () => {
             };
         };
         addNote(interimTranscript);
-        if (interimTranscript) {
-            liveTextEl.textContent = interimTranscript;
-            liveTextEl.classList.remove("placeholder");
-        } else if (!finalTranscript && recognizing) {
-            liveTextEl.textContent = "Listening…";
-        }
+        console.log("aaaaaaaaaapt : ", finalTranscript);
+        console.log("bbbbbbbbb : ", interimTranscript);
+
+        // if (interimTranscript) {
+        //     liveTextEl.textContent = interimTranscript;
+        //     liveTextEl.classList.remove("placeholder");
+        // } else if (!finalTranscript && recognizing) {
+        //     liveTextEl.textContent = "Listening…";
+        // }
 
         // if (finalTranscript) {
         //     const sentences = splitIntoSentences(finalTranscript);
@@ -62,52 +64,5 @@ const StartFunc = () => {
     // document.getElementById("stop").onclick = () => recognition.stop();
 };
 
-// ---- FINAL NOTES: ADD / EDIT / DELETE ----
-function addNote(text) {
-    if (!text) return;
-
-    const li = document.createElement("li");
-    li.classList.add("note-item");
-
-    const textSpan = document.createElement("span");
-    textSpan.classList.add("note-text");
-    textSpan.textContent = text;
-
-    const actions = document.createElement("div");
-    actions.classList.add("note-actions");
-
-    const editBtn = document.createElement("button");
-    editBtn.type = "button";
-    editBtn.className = "icon-btn edit";
-    editBtn.title = "Edit this line";
-    editBtn.textContent = "✏️";
-
-    const deleteBtn = document.createElement("button");
-    deleteBtn.type = "button";
-    deleteBtn.className = "icon-btn delete";
-    deleteBtn.title = "Delete this line";
-    deleteBtn.textContent = "🗑️";
-
-    // EDIT NOTE
-    editBtn.addEventListener("click", () => {
-        const oldText = textSpan.textContent;
-        const updated = prompt("Edit note:", oldText);
-        if (updated === null) return;
-        const newText = updated.trim();
-        if (!newText) return;
-        textSpan.textContent = newText;
-    });
-
-    // DELETE NOTE
-    deleteBtn.addEventListener("click", () => {
-        li.remove();
-    });
-
-    actions.appendChild(editBtn);
-    actions.appendChild(deleteBtn);
-    li.appendChild(textSpan);
-    li.appendChild(actions);
-    finalNotesListEl.appendChild(li);
-};
 
 StartFunc();
