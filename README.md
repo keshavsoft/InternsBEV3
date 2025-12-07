@@ -106,3 +106,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.8.6
 
 -unwanted folders deleted
+
+### 1.8.7
+
+- websocket started
