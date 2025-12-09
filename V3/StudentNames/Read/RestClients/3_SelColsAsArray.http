@@ -1,0 +1,4 @@
+POST http://localhost:9328/V3/StudentNames/Read/SelColsAsArray
+Content-Type: application/json
+
+[ "exampleKey"]

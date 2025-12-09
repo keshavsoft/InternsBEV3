@@ -110,3 +110,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.8.7
 
 - websocket started
+
+### 1.8.8
+
+- websocket nice

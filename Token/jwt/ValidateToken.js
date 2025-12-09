@@ -1,11 +1,9 @@
 import jwt from 'jsonwebtoken';
-import { getFunc } from '../../CommonExpose/forToken.js';
 
 let StartFunc = ({ inToken }) => {
     try {
-        const LocalUuid = getFunc();
-        let jVarTokenInfo = jwt.verify(inToken, LocalUuid);
-
+        let jVarTokenInfo = jwt.verify(inToken, 'KeshavSoft');
+        
         return jVarTokenInfo;
     }
     catch (err) {
