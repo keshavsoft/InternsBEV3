@@ -114,3 +114,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.8.8
 
 - websocket nice
+
+### 1.8.9
+
+- Proposals in Ui started
