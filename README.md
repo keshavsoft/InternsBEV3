@@ -126,3 +126,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.9.1
 
 - Backup added in UI
+
+### 1.9.2
+
+- Landing Ui linked
