@@ -122,3 +122,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.8.10
 
 - Token altered
+
+### 1.9.1
+
+- Backup added in UI
