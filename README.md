@@ -118,3 +118,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.8.9
 
 - Proposals in Ui started
+
+### 1.8.10
+
+- Token altered
