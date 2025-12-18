@@ -4,5 +4,5 @@
     "PostUrl": "/V4/StudentNames/InsertWithChecks/ForUniqueAndImage",
     "PostUrl2": "/V1/StudentNames/Upload/ImageAndMail",
     "PostUrl1": "/binV3/StudentNames/Create/SendMail",
-    "PostUrl3": "/V2/StudentNames/InsertWithChecks/ForUniqueAndImage",
+    "PostUrl3": "/V2/StudentNames/InsertWithChecks/ForUniqueAndImage"
 }

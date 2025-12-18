@@ -134,3 +134,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.11.1
 
 - New Ui started for Delete using
+
+### 1.11.2
+
+- V4 for register
