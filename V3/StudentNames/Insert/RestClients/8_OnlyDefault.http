@@ -1,2 +1,0 @@
-POST http://localhost:9328/V3/StudentNames/Insert/OnlyDefault
-Content-Type: application/json
