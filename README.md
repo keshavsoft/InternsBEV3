@@ -130,3 +130,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.9.2
 
 - Landing Ui linked
+
+### 1.11.1
+
+- New Ui started for Delete using
