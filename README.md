@@ -51,6 +51,10 @@ The server will start on *http://localhost:9015*.
 Ensure Node.js version is v22.22 or above
 ---
 
+https://keshavsoft.github.io/assets/MailAssets/GroupV3.png
+
+image being served for mail sent
+
 ### 1.1.1
 
 - 3 Backups perfect
@@ -154,3 +158,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.11.6
 
 - app public, image path altered
+
+### 1.11.7
+
+- email image perfect from git serve
