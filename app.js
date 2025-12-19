@@ -24,16 +24,47 @@ import { router as routerFromSV9 } from "./SV9/routes.js";
 import { router as routerFromSV10 } from "./SV10/routes.js";
 import { router as routerFromV5 } from "./V5/routes.js";
 
-// app.use(express.static('Public'));
+
+app.use(express.static('Public'));
+// YAHOO MAIL SAFE IMAGE SERVING
 app.use(
-    express.static('Public', {
-        setHeaders: (res, path) => {
-            if (path.endsWith('.png') || path.endsWith('.jpg') || path.endsWith('.jpeg') || path.endsWith('.gif')) {
-                res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
-            }
-        }
-    })
+    '/MailAssets',
+    (req, res, next) => {
+        res.removeHeader('Alt-Svc'); // Yahoo proxy fix
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        res.setHeader('Content-Encoding', 'identity');
+        next();
+    },
+    express.static('Public/MailAssets')
 );
+// app.use(
+//     express.static('Public', {
+//         setHeaders: (res, path) => {
+//             if (path.endsWith('.png') || path.endsWith('.jpg') || path.endsWith('.jpeg') || path.endsWith('.gif')) {
+//                 res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+//             }
+//         }
+//     })
+// );
+
+// ===== YAHOO MAIL IMAGE PROXY FIX =====
+// app.use(
+//     '/MailAssets',
+//     (req, res, next) => {
+//         // Remove HTTP/3 advertisement (Yahoo proxy breaks on this)
+//         res.removeHeader('Alt-Svc');
+
+//         // Force email-safe caching
+//         res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+
+//         // Avoid compression / encoding confusion
+//         res.setHeader('Content-Encoding', 'identity');
+
+//         next();
+//     },
+//     express.static('Public/MailAssets')
+// );
+// =====================================
 
 app.use(cookieParser());
 
