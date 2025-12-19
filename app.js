@@ -27,16 +27,36 @@ import { router as routerFromV5 } from "./V5/routes.js";
 
 app.use(express.static('Public'));
 // YAHOO MAIL SAFE IMAGE SERVING
+// app.use(
+//     '/MailAssets',
+//     (req, res, next) => {
+//         res.removeHeader('Alt-Svc'); // Yahoo proxy fix
+//         res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+//         res.setHeader('Content-Encoding', 'identity');
+//         next();
+//     },
+//     express.static('Public/MailAssets')
+// );
+
 app.use(
     '/MailAssets',
     (req, res, next) => {
-        res.removeHeader('Alt-Svc'); // Yahoo proxy fix
-        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        res.removeHeader('Alt-Svc');
+        res.removeHeader('Accept-Ranges'); // 🔥 IMPORTANT
+        res.removeHeader('Via');
+        res.removeHeader('X-Powered-By');
+
+        res.setHeader('Cache-Control', 'public, max-age=31536000');
         res.setHeader('Content-Encoding', 'identity');
+
         next();
     },
-    express.static('Public/MailAssets')
+    express.static('Public/MailAssets', {
+        acceptRanges: false
+    })
 );
+
+
 // app.use(
 //     express.static('Public', {
 //         setHeaders: (res, path) => {
