@@ -138,5 +138,10 @@
         "InsertWithChecks",
         "Sort",
         "GroupBy"
-    ]
+    ],
+    "NonSecured": {
+        "SubRoutes": [
+            "InsertWithChecks"
+        ]
+    }
 }

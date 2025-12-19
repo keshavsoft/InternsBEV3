@@ -142,3 +142,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.11.3
 
 - V1 to V3 deleted
+
+### 1.11.4
+
+- V4 sub routes only needed
