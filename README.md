@@ -146,3 +146,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.11.4
 
 - V4 sub routes only needed
+
+### 1.11.5
+
+- Version, AboutUs added

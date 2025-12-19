@@ -11,6 +11,8 @@ const server = http.createServer(app);
 
 var port = normalizePort(process.env.PORT || 3000);
 
+import packageJSON from './package.json' with {type: 'json'};
+
 import { StartFunc as StartFuncFromWebSocketServer } from "./Projects/WebSocketServer/V2/entryFile.js";
 import { StartFunc as StartFuncFromMiddleware } from "./Token/MiddleWares/entryFile.js";
 
@@ -25,8 +27,20 @@ import { router as routerFromV5 } from "./V5/routes.js";
 app.use(express.static('Public'));
 app.use(cookieParser());
 
-app.use("/AboutUs", (req, res) => {
-    res.send('Hello World!')
+app.get('/Version', (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,Accept,Authorization');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.end(packageJSON.version);
+});
+
+app.get('/AboutUs', (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,Accept,Authorization');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.end("KeshavSoft : 9848163021");
 });
 
 app.use("/Utility", routerFromUtility);
