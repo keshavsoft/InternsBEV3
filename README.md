@@ -162,3 +162,7 @@ image being served for mail sent
 ### 1.11.7
 
 - email image perfect from git serve
+
+### 1.11.8
+
+- Doctor V6 modular perfect

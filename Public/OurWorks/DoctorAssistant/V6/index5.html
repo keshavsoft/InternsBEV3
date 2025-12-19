@@ -323,7 +323,7 @@
         Note deleted
         <button onclick="undoDelete()">Undo</button>
     </div>
-    <!-- 
+
     <script>
         /* 🔔 BEEP */
         let audioCtx = null;
@@ -483,24 +483,7 @@
             a.download = "OPD_Notes.txt";
             a.click();
         }
-    </script> -->
-    <script>
-        /* 🎙 SPEECH */
-        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-        const recognition = new SpeechRecognition();
-        recognition.interimResults = false;
-        recognition.continuous = false;
-
-        let recognizing = false;
-        let activeSection = null;
-        let activeButton = null;
-        let session = 0, activeSession = null;
-
-        /* 🗑️ UNDO */
-        let lastDeleted = null, lastParent = null, undoTimer = null;
     </script>
-
-    <script src="Index/Js/entryFile.js" type="module"></script>
 </body>
 
 </html>
