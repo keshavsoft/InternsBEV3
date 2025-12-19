@@ -150,3 +150,7 @@ Ensure Node.js version is v22.22 or above
 ### 1.11.5
 
 - Version, AboutUs added
+
+### 1.11.6
+
+- app public, image path altered

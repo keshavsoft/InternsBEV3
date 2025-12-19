@@ -24,7 +24,17 @@ import { router as routerFromSV9 } from "./SV9/routes.js";
 import { router as routerFromSV10 } from "./SV10/routes.js";
 import { router as routerFromV5 } from "./V5/routes.js";
 
-app.use(express.static('Public'));
+// app.use(express.static('Public'));
+app.use(
+    express.static('Public', {
+        setHeaders: (res, path) => {
+            if (path.endsWith('.png') || path.endsWith('.jpg') || path.endsWith('.jpeg') || path.endsWith('.gif')) {
+                res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+            }
+        }
+    })
+);
+
 app.use(cookieParser());
 
 app.get('/Version', (req, res) => {
